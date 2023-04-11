@@ -86,3 +86,47 @@ h2 {
   padding: 20px;
   position: relative;
 }
+
+.project-card {
+  background-color: #f9f9f9;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 10px;
+  width: calc(25% - 20px);
+  transition: all 0.3s, opacity 0.3s, transform 0.5s;
+  position: relative;
+  opacity: 1;
+}
+
+.project-card img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.project-card.expanded {
+  z-index: 1;
+  width: calc(100% - 20px);
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.project-card:not(.expanded) {
+  transform: translateY(100%);
+}
+
+.links {
+  display: flex;
+  justify-content: space-around;
+}
+
+.project-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  position: absolute;
+  width: 100%;
+}
