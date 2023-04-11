@@ -1,0 +1,88 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f5ede3; /* Cream */
+  color: #2c3a47;
+}
+.App {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+h1 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+}
+h2 {
+  font-size: 1.5em;
+  margin: 10px 0;
+}
+.container {
+  width: 100%;
+  display: flex;
+  height: calc(100% - 50px);
+}
+.box {
+  background-color: #a1c9a5; /* Pale dark green */
+  flex: 0 0 calc(30% - 20px);
+  padding: 20px;
+  margin: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+.box:hover {
+  transform: translateY(-10px);
+}
+.accent {
+  color: #f7a8b8; /* Pale pink */
+}
+.expanded-info {
+  max-height: 0;
+  /* overflow: hidden; */
+  transition: max-height 0.3s;
+  width: 100%;
+  position: absolute;
+}
+
+.project-img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+}
+.social-links {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+.social-links a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.box.open .expanded-info {
+  max-height: 1000px; /* You can adjust this value based on the content height */
+}
+
+.sidebar {
+  flex: 0 0 20%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-content {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  position: relative;
+}
